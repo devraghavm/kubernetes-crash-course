@@ -12,7 +12,8 @@ kubectl apply -f istio.yaml
 kubectl label namespace default istio-injection=enabled
 ```
 
-Latest Istio:
+Latest Istio: ([Istio](https://istio.io/v1.6/docs/setup/getting-started/))
+
 Followed below steps instead:
 ```
 gcloud container clusters get-credentials standard-cluster-1 --zone=europe-west1-b
