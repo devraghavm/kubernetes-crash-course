@@ -12,6 +12,20 @@ kubectl apply -f istio.yaml
 kubectl label namespace default istio-injection=enabled
 ```
 
+Latest Istio:
+Followed below steps instead:
+```
+gcloud container clusters get-credentials standard-cluster-1 --zone=europe-west1-b
+kubectl create namespace istio-system
+curl -L https://istio.io/downloadIstio | sh -
+cd istio-1.6.8
+export PATH=$PWD/bin:$PATH
+istioctl install --set profile=demo
+
+kubectl label namespace default istio-injection=enabled
+
+```
+
 Windows - https://curl.haxx.se/windows/
 
 # Using Kiali

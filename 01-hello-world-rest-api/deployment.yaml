@@ -25,7 +25,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: devraghavm/hello-world-rest-api:0.0.1.RELEASE
+      - image: devraghavm/hello-world-rest-api:0.0.2-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: hello-world-rest-api
       restartPolicy: Always
@@ -58,25 +58,25 @@ spec:
         version: v2
     spec:
       containers:
-      - image: devraghavm/hello-world-rest-api:0.0.2.RELEASE
-        imagePullPolicy: IfNotPresent
-        name: hello-world-rest-api
+        - image: devraghavm/hello-world-rest-api:0.0.4-SNAPSHOT
+          imagePullPolicy: IfNotPresent
+          name: hello-world-rest-api
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  labels: #PODS
+  labels:
     app: hello-world-rest-api
   name: hello-world-rest-api
   namespace: default
 spec:
   ports:
-  - nodePort: 30702
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
+    - nodePort: 31812
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
   selector:
     app: hello-world-rest-api
     version: v1

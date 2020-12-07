@@ -1,0 +1,14 @@
+/.project
+*/target/*
+/bin/
+/.settings/
+/.classpath
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Custom Installations ###
+*/istio-*/*

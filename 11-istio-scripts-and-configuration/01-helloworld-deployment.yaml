@@ -16,7 +16,7 @@ spec:
         app: hello-world-rest-api
     spec:
       containers:
-      - image: in28min/hello-world-rest-api:0.0.1.RELEASE
+      - image: devraghavm/hello-world-rest-api:0.0.4-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: hello-world-rest-api
         ports:

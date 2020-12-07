@@ -33,7 +33,7 @@ We will deploy to Docker as a WAR
 	<plugin>
 		<groupId>com.spotify</groupId>
 		<artifactId>dockerfile-maven-plugin</artifactId>
-		<version>1.4.6</version>
+		<version>1.4.13</version>
 		<executions>
 			<execution>
 				<id>default</id>
@@ -43,7 +43,7 @@ We will deploy to Docker as a WAR
 			</execution>
 		</executions>
 		<configuration>
-			<repository>in28min/${project.name}</repository>
+			<repository>devraghavm/${project.name}</repository>
 			<tag>${project.version}</tag>
 			<skipDockerInfo>true</skipDockerInfo>
 		</configuration>

@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
@@ -32,7 +32,7 @@ spec:
           value: "3306"
         - name: RDS_USERNAME
           value: todos-user
-        image: in28min/todo-web-application-mysql:0.0.1-SNAPSHOT
+        image: devraghavm/todo-web-application-mysql:0.0.1-SNAPSHOT
         name: todo-web-application
         ports:
         - containerPort: 8080

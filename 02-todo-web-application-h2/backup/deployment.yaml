@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
@@ -22,7 +22,7 @@ spec:
         app: todo-web-application-h2
     spec:
       containers:
-      - image: in28min/todo-web-application-h2:0.0.1-SNAPSHOT
+      - image: devraghavm/todo-web-application-h2:0.0.1-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: todo-web-application-h2
       restartPolicy: Always
