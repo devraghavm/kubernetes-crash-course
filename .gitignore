@@ -12,3 +12,5 @@
 
 ### Custom Installations ###
 */istio-*/*
+--policy-document
+iam-policy.json
